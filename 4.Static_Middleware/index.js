@@ -1,10 +1,12 @@
 const express = require("express")
-const path = require('path')
 const app = express()
+const path = require('path')
  
 const staticPath = path.join(__dirname,"/")
 
-app.use(express.static(staticPath));
+//express.static(root, [options])
+
+app.use(express.static(staticPath))
 
 app.get("/",(req,res) =>{
   res.send("hello world");
